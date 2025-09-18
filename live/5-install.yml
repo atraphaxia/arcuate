@@ -9,6 +9,3 @@
 
 - name: Generate fstab
   ansible.builtin.shell: genfstab -U /mnt >> /mnt/etc/fstab
-
-- name: Chroot
-  ansible.builtin.command: arch-chroot /mnt

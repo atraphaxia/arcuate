@@ -1,0 +1,14 @@
+---
+- name: Check if arch-install-scripts is installed
+  community.general.pacman:
+    name: arch-install-scripts
+    state: installed
+
+- name: Run pacstrap
+  ansible.builtin.command: pacstrap -K /mnt base linux linux-firmware {{ specs.cpu }}-ucode
+
+- name: Generate fstab
+  ansible.builtin.shell: genfstab -U /mnt >> /mnt/etc/fstab
+
+- name: Chroot
+  ansible.builtin.command: arch-chroot /mnt

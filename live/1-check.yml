@@ -1,0 +1,5 @@
+---
+- name: Check if the distribution is Arch Linux
+  ansible.builtin.assert:
+    that: ansible_distribution == "Archlinux"
+    fail_msg: "This playbook only supports Arch Linux."

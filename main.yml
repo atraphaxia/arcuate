@@ -1,0 +1,10 @@
+---
+- name: Main
+  hosts: all
+  any_errors_fatal: true
+
+  vars_files:
+    - config.yml
+
+  tasks:
+    - ansible.builtin.import_tasks: live/1-check.yml

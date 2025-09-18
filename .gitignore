@@ -4,4 +4,11 @@
 !/LICENSE
 !/README.md
 
+!/config.yml
 !/inventory.yml
+!/requirements.yml
+
+!/main.yml
+
+!/live/
+!/live/1-check.yml

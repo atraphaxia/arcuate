@@ -5,7 +5,7 @@
     state: installed
 
 - name: Run pacstrap
-  ansible.builtin.command: pacstrap -K /mnt base linux linux-firmware {{ specs.cpu }}-ucode
+  ansible.builtin.command: pacstrap -K /mnt base linux linux-firmware {{ cpu }}-ucode
 
 - name: Generate fstab
   ansible.builtin.shell: genfstab -U /mnt >> /mnt/etc/fstab

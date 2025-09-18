@@ -33,5 +33,5 @@ You will be in the cloned repository directory after executing all commands. Mod
 $ ansible-galaxy install -r requirements.yml
 
 # Execute the playbook
-$ ansible-playbook main.yml -i inventory.yml
+$ ansible-playbook live.yml -i inventory.yml
 ```

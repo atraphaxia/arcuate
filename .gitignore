@@ -8,8 +8,7 @@
 !/inventory.yml
 !/requirements.yml
 
-!/main.yml
-
+!/live.yml
 !/live/
 !/live/1-check.yml
 !/live/2-partition.yml

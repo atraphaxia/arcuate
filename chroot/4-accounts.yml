@@ -1,0 +1,12 @@
+---
+- name: Set root password
+  ansible.builtin.user:
+    name: root
+    password: "{{ root.password }}"
+
+- name: Create user account
+  ansible.builtin.user:
+    name: "{{ user.name }}"
+    create_home: true
+    groups: "{{ user.groups }}"
+    password: "{{ user.password }}"

@@ -21,3 +21,4 @@
 !/chroot/1-time.yml
 !/chroot/2-locale.yml
 !/chroot/3-network.yml
+!/chroot/4-accounts.yml

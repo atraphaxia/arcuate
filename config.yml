@@ -14,3 +14,11 @@ wifi:
   interface: wlp3s0
   ssid: your-wifi-ssid
   password: your-wifi-password
+
+root:
+  password: your-root-password
+
+user:
+  name: your-user-name
+  groups: your-user-groups
+  password: your-user-password

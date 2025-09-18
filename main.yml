@@ -14,3 +14,5 @@
     - ansible.builtin.import_tasks: live/5-install.yml
     - ansible.builtin.import_tasks: chroot/1-time.yml
     - ansible.builtin.import_tasks: chroot/2-locale.yml
+    - ansible.builtin.import_tasks: chroot/3-network.yml
+    - ansible.builtin.import_tasks: chroot/4-accounts.yml

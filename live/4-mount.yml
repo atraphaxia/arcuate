@@ -5,7 +5,15 @@
     state: installed
 
 - name: Mount root partition
-  ansible.builtin.command: mount {{ disk.block_device }}p2 /mnt/ --mkdir
+  ansible.posix.mount:
+    path: /mnt/
+    src: "{{ disk.block_device }}p2"
+    state: mounted
+    fstype: ext4
 
 - name: Mount boot partition
-  ansible.builtin.command: mount {{ disk.block_device }}p1 /mnt/boot/ --mkdir
+  ansible.posix.mount:
+    path: /mnt/boot/
+    src: "{{ disk.block_device }}p1"
+    state: mounted
+    fstype: vfat

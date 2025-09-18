@@ -11,4 +11,4 @@
     - ansible.builtin.import_tasks: live/2-partition.yml
     - ansible.builtin.import_tasks: live/3-format.yml
     - ansible.builtin.import_tasks: live/4-mount.yml
-    - ansible.builtin.import_tasks: live/5-install.yml
+#   - ansible.builtin.import_tasks: live/5-install.yml

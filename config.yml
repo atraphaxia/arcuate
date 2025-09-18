@@ -5,3 +5,4 @@ boot_partition_size: 1G
 cpu: amd
 
 timezone: Asia/Manila
+locale: en_US.UTF-8

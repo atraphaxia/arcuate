@@ -1,0 +1,22 @@
+---
+- name: Check if networkmanager is installed
+  community.general.pacman:
+    name: networkmanager
+    state: installed
+
+- name: Set hostname
+  ansible.builtin.hostname:
+    name: "{{ hostname }}"
+    use: systemd
+
+- name: Setup WiFi
+  community.general.nmcli:
+    type: wifi
+    conn_name: "{{ wifi.ssid }}"
+    ifname: "{{ wifi.interface }}"
+    ssid: "{{ wifi.ssid }}"
+    wifi_sec:
+      key-mgmt: wpa-psk
+      psk: "{{ wifi.password }}"
+    autoconnect: true
+    state: present

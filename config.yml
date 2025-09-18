@@ -6,3 +6,10 @@ cpu: amd
 
 timezone: Asia/Manila
 locale: en_US.UTF-8
+
+hostname:
+
+wifi:
+  interface: wlp3s0
+  ssid:
+  password:

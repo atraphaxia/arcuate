@@ -1,15 +1,16 @@
 ---
-block_device: /dev/nvme0n1
-boot_partition_size: 1G
+disk:
+  block_device: /dev/nvme0n1
+  boot_partition_size: 1G
 
 cpu: amd
 
 timezone: Asia/Manila
 locale: en_US.UTF-8
 
-hostname:
+hostname: your-hostname
 
 wifi:
   interface: wlp3s0
-  ssid:
-  password:
+  ssid: your-wifi-ssid
+  password: your-wifi-password

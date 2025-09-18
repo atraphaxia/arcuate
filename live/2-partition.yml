@@ -5,10 +5,10 @@
     state: installed
 
 - name: Delete GPT and MBR
-  ansible.builtin.command: sgdisk {{ block_device }} --zap-all
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --zap-all
 
 - name: Create boot partition
-  ansible.builtin.command: sgdisk {{ block_device }} --new=1:0:{{ boot_partition_size }} --typecode=1:ef00
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --new=1:0:{{ disk.boot_partition_size }} --typecode=1:ef00
 
 - name: Create root partition
-  ansible.builtin.command: sgdisk {{ block_device }} --largest-new=2 --typecode=1:8304
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --largest-new=2 --typecode=1:8304

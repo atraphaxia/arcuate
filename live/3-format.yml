@@ -10,7 +10,7 @@
     state: installed
 
 - name: Format boot partition
-  ansible.builtin.command: mkfs.fat -F 32 {{ block_device }}p1
+  ansible.builtin.command: mkfs.fat -F 32 {{ disk.block_device }}p1
 
 - name: Format root partition
-  ansible.builtin.command: mkfs.ext4 {{ block_device }}p2
+  ansible.builtin.command: mkfs.ext4 {{ disk.block_device }}p2

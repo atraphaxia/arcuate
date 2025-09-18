@@ -7,13 +7,13 @@
 - name: Mount root partition
   ansible.posix.mount:
     path: /mnt/
-    src: "{{ block_device }}p2"
+    src: "{{ disk.block_device }}p2"
     state: mounted
     fstype: ext4
 
 - name: Mount boot partition
   ansible.posix.mount:
     path: /mnt/boot/
-    src: "{{ block_device }}p1"
+    src: "{{ disk.block_device }}p1"
     state: mounted
     fstype: vfat

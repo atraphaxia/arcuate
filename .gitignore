@@ -16,3 +16,6 @@
 !/live/3-format.yml
 !/live/4-mount.yml
 !/live/5-install.yml
+
+!/chroot/
+!/chroot/1-time.yml

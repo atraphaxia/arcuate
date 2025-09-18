@@ -8,3 +8,4 @@
 
   tasks:
     - ansible.builtin.import_tasks: live/1-check.yml
+    - ansible.builtin.import_tasks: live/2-partition.yml

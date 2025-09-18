@@ -1,0 +1,17 @@
+---
+- name: Check if gptfdisk is installed
+  community.general.pacman:
+    name: gptfdisk
+    state: installed
+
+- name: Delete GPT and MBR
+  become: true
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --zap-all
+
+- name: Create boot partition
+  become: true
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --new=1:0:{{ disk.boot_partition_size }} --typecode=1:ef00
+
+- name: Create root partition
+  become: true
+  ansible.builtin.command: sgdisk {{ disk.block_device }} --largest-new=2 --typecode=1:8304

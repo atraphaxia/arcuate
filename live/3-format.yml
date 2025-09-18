@@ -1,0 +1,16 @@
+---
+- name: Check if dosfstools is installed
+  community.general.pacman:
+    name: dosfstools
+    state: installed
+
+- name: Check if e2fsprogs is installed
+  community.general.pacman:
+    name: e2fsprogs
+    state: installed
+
+- name: Format boot partition
+  ansible.builtin.command: mkfs.fat -F 32 {{ disk.block_device }}p1
+
+- name: Format root partition
+  ansible.builtin.command: mkfs.ext4 {{ disk.block_device }}p2
